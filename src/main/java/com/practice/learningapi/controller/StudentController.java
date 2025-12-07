@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 public class StudentController {
 
     private final StudentService studentService;
-
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
@@ -18,13 +17,13 @@ public class StudentController {
     // INSERT STUDENT
     @PostMapping
     public Student createStudent(@RequestBody Student student) {
-        System.out.println("hello world!");
         return studentService.saveStudent(student);
     }
 
     //  GET STUDENT BY ID
     @GetMapping("/{id}")
     public Student getStudentById(@PathVariable Long id) {
+        System.out.println("Hello Priyanshu!");
         return studentService.getStudentById(id);
     }
 }
