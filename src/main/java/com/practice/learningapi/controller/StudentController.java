@@ -14,9 +14,11 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+
     // INSERT STUDENT
     @PostMapping
     public Student createStudent(@RequestBody Student student) {
+        System.out.println("hello world!");
         return studentService.saveStudent(student);
     }
 
