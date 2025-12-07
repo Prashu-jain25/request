@@ -23,6 +23,7 @@ public class StudentController {
     //  GET STUDENT BY ID
     @GetMapping("/{id}")
     public Student getStudentById(@PathVariable Long id) {
+        System.out.println("Hello Priyanshu!");
         return studentService.getStudentById(id);
     }
 }
